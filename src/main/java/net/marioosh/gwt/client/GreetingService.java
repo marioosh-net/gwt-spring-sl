@@ -8,6 +8,10 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 /**
  * The client side stub for the RPC service.
+ * 
+ * /{moduleName}/greet.rpc 
+ * pod takim url bedzie servlet RPC
+ * 
  */
 @RemoteServiceRelativePath("greet.rpc")
 public interface GreetingService extends RemoteService {

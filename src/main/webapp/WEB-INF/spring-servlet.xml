@@ -22,6 +22,8 @@
 
     <context:component-scan base-package="net.marioosh.gwt" />
     <context:annotation-config />
+    
+    <!-- Commented out because of conflict with GWTHandler. Instead we declare the elements declaratively! -->
     <!-- <mvc:annotation-driven /> -->
 
     <!-- Publishing multiple RPC services -->
