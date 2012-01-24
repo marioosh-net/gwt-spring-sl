@@ -24,17 +24,6 @@
     <context:annotation-config />
     <!-- <mvc:annotation-driven /> -->
 
-    <!-- Publishing multiple RPC services -->
-	<bean class="org.gwtwidgets.server.spring.GWTHandler">
-		<property name="mappings">
-			<map>
-				<entry key="/**/greet.rpc" value-ref="greetingService" />
-			</map>
-		</property>
-	</bean>
-	<!-- RPC service as Spring service -->
-    <bean id="greetingService" class="net.marioosh.gwt.server.GreetingServiceImpl" />  
-
     <!-- DATA SOURCE -->    
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.hsqldb.jdbcDriver" />

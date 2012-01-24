@@ -7,15 +7,20 @@ import net.marioosh.gwt.shared.RPCException;
 import net.marioosh.gwt.shared.model.dao.UserDAO;
 import net.marioosh.gwt.shared.model.entities.User;
 import org.apache.log4j.Logger;
+import org.gwtwidgets.server.spring.GWTSpringController;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 /**
  * The server side implementation of the RPC service.
  */
+@Controller("greetingService")
+@RequestMapping("/**/greet.rpc")
 @SuppressWarnings("serial")
-public class GreetingServiceImpl implements	GreetingService {
+public class GreetingServiceImpl extends GWTSpringController implements	GreetingService {
 
 	Logger log = Logger.getLogger(getClass());
 
